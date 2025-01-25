@@ -8,7 +8,6 @@ Source0:        https://github.com/Miriway/Miriway/archive/v%{version}/Miriway-%
 
 BuildRequires:  cmake
 BuildRequires:  git-core
-BuildRequires:  ninja-build
 BuildRequires:  pkgconfig(miral)
 BuildRequires:  pkgconfig(xkbcommon)
 Requires:       inotify-tools
@@ -70,11 +69,11 @@ sed -e "s/-Werror//g" -i CMakeLists.txt
 %build
 # Deal with some goofiness around sysconfdir
 %cmake -GNinja -DCMAKE_INSTALL_SYSCONFDIR=%{_sysconfdir} -DSDDM=ON
-%cmake_build
+%make_build
 
 
 %install
-%cmake_install
+%make_install -C build
 
 # Remove miriway-unsnap as it's kind of pointless
 rm -f %{buildroot}%{_bindir}/%{name}-{unconfine,unsnap}

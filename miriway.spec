@@ -83,8 +83,8 @@ mkdir -p %{buildroot}%{_prefix}/lib/sddm
 mv %{buildroot}%{_sysconfdir}/sddm.conf.d %{buildroot}%{_prefix}/lib/sddm
 
 # install initial-setup-gui backend script
-mkdir -p %{buildroot}%{_libexecdir}/initial-setup
-install -pm 0755 %{S:1} %{buildroot}%{_libexecdir}/initial-setup/run-gui-backend
+#mkdir -p %{buildroot}%{_libexecdir}/initial-setup
+#install -pm 0755 %{S:1} %{buildroot}%{_libexecdir}/initial-setup/run-gui-backend
 
 
 %files
@@ -108,6 +108,3 @@ install -pm 0755 %{S:1} %{buildroot}%{_libexecdir}/initial-setup/run-gui-backend
 
 %files -n sddm-wayland-%{name}
 %{_prefix}/lib/sddm/sddm.conf.d/%{name}.conf
-
-%files -n initial-setup-gui-wayland-%{name}
-%{_libexecdir}/initial-setup/run-gui-backend

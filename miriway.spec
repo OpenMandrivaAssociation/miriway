@@ -68,7 +68,7 @@ sed -e "s/-Werror//g" -i CMakeLists.txt
 
 %build
 # Deal with some goofiness around sysconfdir
-%cmake -GNinja -DCMAKE_INSTALL_SYSCONFDIR=%{_sysconfdir} -DSDDM=ON
+%cmake -DCMAKE_INSTALL_SYSCONFDIR=%{_sysconfdir} -DSDDM=ON
 %make_build
 
 

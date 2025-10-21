@@ -11,6 +11,7 @@ BuildRequires:  git-core
 BuildRequires:  pkgconfig(miral)
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  boost-exception-devel
+BuildRequires:  boost-devel
 Requires:       inotify-tools
 Requires:       swaybg
 Requires:       xkeyboard-config

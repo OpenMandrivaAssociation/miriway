@@ -1,5 +1,5 @@
 Name:           miriway
-Version:        25.11
+Version:        25.12
 Release:        1
 Summary:        Simple Wayland compositor built on Mir
 License:        GPL-3.0-only

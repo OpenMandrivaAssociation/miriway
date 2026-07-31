@@ -1,5 +1,5 @@
 Name:           miriway
-Version:        25.12
+Version:        26.06.3
 Release:        1
 Summary:        Simple Wayland compositor built on Mir
 License:        GPL-3.0-only
@@ -62,7 +62,7 @@ compositor.
 
 
 %prep
-%autosetup -n Miriway-%{version} -S git_am
+%autosetup -n Miriway-26.06.3 -S git_am
 
 # Drop -Werror
 sed -e "s/-Werror//g" -i CMakeLists.txt

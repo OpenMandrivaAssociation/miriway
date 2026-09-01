@@ -1,11 +1,12 @@
 Name:           miriway
-Version:        26.06.3
+Version:        26.08
 Release:        1
 Summary:        Simple Wayland compositor built on Mir
 License:        GPL-3.0-only
 URL:            https://miriway.github.io/
 Source0:        https://github.com/Miriway/Miriway/archive/v%{version}/Miriway-%{version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:  cmake
 BuildRequires:  git-core
 BuildRequires:  pkgconfig(miral)
@@ -62,7 +63,7 @@ compositor.
 
 
 %prep
-%autosetup -n Miriway-26.06.3 -S git_am
+%autosetup -n Miriway-%{version} -S git_am
 
 # Drop -Werror
 sed -e "s/-Werror//g" -i CMakeLists.txt

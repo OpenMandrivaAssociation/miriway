@@ -101,6 +101,7 @@ mv %{buildroot}%{_sysconfdir}/sddm.conf.d %{buildroot}%{_prefix}/lib/sddm
 %{_bindir}/%{name}-terminal
 %dir %{_sysconfdir}/xdg/xdg-%{name}
 %config(noreplace) %{_sysconfdir}/xdg/xdg-%{name}/%{name}-shell.config
+%{_datadir}/backgrounds/miriway.png
 
 %files session
 %doc example-configs
